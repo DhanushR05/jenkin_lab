@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven'   // Name must match the one you configured
+        maven 'maven'   // Name must match the one you configured
         jdk 'java'          // Match with your JDK configuration name
     }
 
