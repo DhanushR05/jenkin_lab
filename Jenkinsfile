@@ -4,7 +4,8 @@ pipeline {
     tools {
         // Use the correct tool names as configured in Jenkins
         maven 'maven'   // Name must match the Maven installation name configured in Jenkins
-        jdk 'java'    // Ensure this matches the JDK name configured in Jenkins
+        jdk 'java' 
+        git 'git'
     }
 
     environment {
@@ -15,7 +16,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Correct repository URL for your project
-                git 'https://github.com/DhanushR05/jenkin_lab.git'  // Your correct repository URL
+                git branch: 'main', url: 'https://github.com/DhanushR05/jenkin_lab.git'  // Your correct repository URL
             }
         }
 
